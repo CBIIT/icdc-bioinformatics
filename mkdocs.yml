@@ -10,14 +10,6 @@ theme:
     #scheme: preference
     primary: white
     #accent: teal
-  features:
-    - navigation.tabs
-    - navigation.instant
-    #- navigation.sections
-  favicon: images/CFDE-logo-white-outline.png
-  logo: images/CFDE-logo.png
-  custom_dir: custom
-  docs_dir: docs
 
 
 plugins:
