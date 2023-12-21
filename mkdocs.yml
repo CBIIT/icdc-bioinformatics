@@ -1,1 +1,56 @@
-site_name: My Test
+site_name: The Integrated Canine Data Commons Training Center
+site_url: https://cbiit.github.io/icdc-genomics/
+site_description: >-
+   </br></br>Select a tutorial and learn how to access data from the ICDC and perform a bioinformatic analysis
+
+
+
+theme:
+  name: readthedocs
+  palette:
+    #scheme: preference
+    primary: white
+    #accent: teal
+  features:
+    - navigation.tabs
+    - navigation.instant
+    #- navigation.sections
+  #favicon: images/CFDE-logo-white-outline.png
+  #logo: images/CFDE-logo.png
+  #custom_dir: custom
+  docs_dir: docs
+
+
+plugins:
+  - search: # necessary for search to work
+      separator: '[\s\-\.]+'
+  
+
+markdown_extensions:
+
+
+
+- codehilite:
+    guess_lang: false
+- toc:
+    permalink: true
+extra:
+  hypothesis: true
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:CFDE-HelpDesk%20<training@cfde.atlassian.net>
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/CfdeNih
+    - icon: fontawesome/brands/github
+      link: https://github.com/nih-cfde/training-and-engagement/tree/stable
+    - icon: material/card-account-mail
+      link: mailto:CFDE-Training%20<CFDETraining+subscribe@CFDEpublic.groups.io>
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/asciinema-player.css
+  - stylesheets/overrides.min.css
+extra_javascript:
+  - javascripts/medium-zoom.min.js
+  - javascripts/extra.js
+  - javascripts/asciinema-player.js
+
