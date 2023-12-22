@@ -6,7 +6,7 @@ site_description: >-
 
 
 theme:
-  name: material
+  name: readthedocs
   palette:
     #scheme: preference
     primary: white
