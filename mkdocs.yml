@@ -6,7 +6,7 @@ site_description: >-
 
 
 theme:
-  name: minima
+  name: material
   palette:
     #scheme: preference
     primary: white
