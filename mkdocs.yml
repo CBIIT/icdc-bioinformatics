@@ -7,10 +7,10 @@ site_description: >-
 
 theme:
    name: material
-     features:
-        - navigation.path
-        - navigation.sections
-        - navigation.tabs
+   features:
+      - navigation.path
+      - navigation.sections
+      - navigation.tabs
 
 nav:
   - Home: index.md
