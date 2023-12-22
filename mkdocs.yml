@@ -6,7 +6,10 @@ site_description: >-
 
 
 theme:
-  name: readthedocs
+  features:
+     - navigation.path
+     - navigation.sections
+     - navigation.tabs
 
 nav:
   - Home: index.md
