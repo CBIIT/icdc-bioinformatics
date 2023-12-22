@@ -30,3 +30,9 @@ This example  RNA-Seq analysis uses 6 Binary Alignment Mapping files derived fro
 | 5  | Count sequencing reads that map to exons in the canine genome using htseq-count |
 | 6  | Download metadata file for bam files and reformat so that "Sample_ID" is the first column |
 | 7  | Run the DESeq2 app with appropriate inputs and computational settings to conduct differential expression between tumor and normal samples |
+
+=== "Tutorial Resources"
+    - [The Integrated Canine Data Commons](https://caninecommons.cancer.gov/#/home){:target="_blank"}
+    - [Playlist of video tutorials explaining concepts used in RNA-Seq analysis](https://www.youtube.com/playlist?list=PLblh5JKOoLUJo2Q6xK4tZElbIvAACEykp){:target="_blank"}
+    - [DESeq2 vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#how-do-i-use-vst-or-rlog-data-for-differential-testing){:target="_blank"}
+  
