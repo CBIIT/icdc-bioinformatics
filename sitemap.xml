@@ -11,7 +11,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://cbiit.github.io/icdc-genomics/rna-seq/</loc>
+         <loc>https://cbiit.github.io/icdc-genomics/Tutorials/RNA-Seq-on-CGC/rna_seq_01/</loc>
+         <lastmod>2023-12-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cbiit.github.io/icdc-genomics/Tutorials/RNA-Seq-on-CGC/rna_seq_02/</loc>
+         <lastmod>2023-12-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cbiit.github.io/icdc-genomics/Tutorials/RNA-Seq-on-CGC/rna_seq_03/</loc>
          <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
