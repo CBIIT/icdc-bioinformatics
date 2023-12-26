@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cbiit.github.io/icdc-genomics/</loc>
-         <lastmod>2023-12-22</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cbiit.github.io/icdc-genomics/about/</loc>
-         <lastmod>2023-12-22</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cbiit.github.io/icdc-genomics/rna-seq/</loc>
-         <lastmod>2023-12-22</lastmod>
+         <lastmod>2023-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
