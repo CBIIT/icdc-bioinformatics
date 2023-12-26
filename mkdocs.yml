@@ -1,5 +1,6 @@
-site_name: The Integrated Canine Data Commons Bioinformatics
+site_name: The Integrated Canine Data Commons Bioinformatics Training Center
 site_url: https://cbiit.github.io/icdc-genomics/
+repo_url: https://cbiit.github.io/icdc-genomics/
 site_description: >-
    </br></br>Select a tutorial and learn how to access data from the ICDC and perform a bioinformatic analysis
 
@@ -13,11 +14,16 @@ theme:
       - navigation.path
       - navigation.sections
       - navigation.tabs
+      - navigation.tracking
+      - navigation.path
+      - navigation.top
+      - navigation.expand 
 
 nav:
   - Home: index.md
   - About: about.md
-  - Tutorial: rna-seq.md
+  - Tutorials: 
+      - RNA-Seq on the CGC: rna-seq.md
 
 extra_css:
   - stylesheets/extra.css
