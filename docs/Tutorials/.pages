@@ -1,5 +1,3 @@
 nav:
-  - Tutorials: 
-      - rna_seq_01.md
-      - rna_seq_02.md
-      - rna_seq_03.md
+  - RNA-Seq on the CGC: RNA-Seq-on-CGC
+  
