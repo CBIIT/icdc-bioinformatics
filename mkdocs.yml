@@ -21,12 +21,16 @@ theme:
       - navigation.top
       - navigation.expand 
 
-nav:
-  - Home: index.md
-  - About: about.md
-  - Tutorials: 
-      - RNA-Seq on the CGC: rna-seq.md
+#nav:
+  #- Home: index.md
+  #- About: about.md
+  #- Tutorials: 
+      #- RNA-Seq on the CGC: rna-seq.md
 
 extra_css:
   - stylesheets/extra.css
+
+plugins:
+   - search
+   - awesome-pages
  
