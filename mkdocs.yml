@@ -8,6 +8,7 @@ theme:
    palette:
     primary: custom
    logo: assets/canine_bubble.png
+   favicon: images/canine_bubble.png
    features:
       - navigation.path
       - navigation.sections
