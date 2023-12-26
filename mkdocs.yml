@@ -10,6 +10,8 @@ theme:
     primary: custom
    logo: assets/canine_bubble.png
    favicon: images/canine_bubble.png
+   icon: 
+      repo: fontawesome/brands/github
    features:
       - navigation.path
       - navigation.sections
