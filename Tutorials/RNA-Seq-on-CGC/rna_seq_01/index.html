@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#differential-gene-expression-analysis-using-the-ubc02-study" class="md-skip">
+        <a href="#differential-gene-expression-analysis-on-the-cancer-genomics-cloud-cgc" class="md-skip">
           Skip to content
         </a>
       
@@ -453,15 +453,15 @@
 
 
 
-<h1 id="differential-gene-expression-analysis-using-the-ubc02-study">Differential Gene Expression Analysis using the UBC02 Study</h1>
+<h1 id="differential-gene-expression-analysis-on-the-cancer-genomics-cloud-cgc">Differential Gene Expression Analysis on the Cancer Genomics Cloud (CGC)</h1>
 <p><strong>RNA sequencing (RNA-Seq)</strong> is a high throughput technique that provides qualitative and quantitative information about RNA biology including transcriptome-wide expression quantification, discovery of novel genes and gene isoforms, and differential expression. </p>
 <p>The goal of this tutorial is to enable you to: </p>
 <ol>
-<li>create virtual cancer cohorts using the Integrated Canine Data Commons (ICDC). </li>
-<li>analyze differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform for the ICDC.</li>
+<li>Create virtual cancer cohorts using the Integrated Canine Data Commons (ICDC). </li>
+<li>Conduct differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform for the ICDC.</li>
 </ol>
-<p>This example  RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  </p>
-<p><strong>Bioinformatic Pipeline</strong></p>
+<p>This example RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  </p>
+<p><strong>Table of Contents</strong></p>
 <table>
 <thead>
 <tr>
@@ -472,31 +472,19 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>Select RNA-Seq files from the UBC02 study in the ICDC and export to the Cancer Genomics Cloud</td>
+<td><a href="./">Overview of RNA-Seq</a></td>
 </tr>
 <tr>
 <td>2</td>
-<td>Run samtools flagstat to get summary stats for each file</td>
+<td><a href="../rna_seq_02/">Building a Cohort on the ICDC</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Sort bam files by coordinate and name using samtools sort</td>
+<td><a href="../rna_seq_03/">Navigating the CGC</a> Set up project, inpsect files, and copy tools</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Run samtools view to inspect bam file headers</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Count sequencing reads that map to exons in the canine genome using htseq-count</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Download metadata file for bam files and reformat so that "Sample_ID" is the first column</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Run the DESeq2 app with appropriate inputs and computational settings to conduct differential expression between tumor and normal samples</td>
+<td>[Analyze sample files using pipeline]</td>
 </tr>
 </tbody>
 </table>
