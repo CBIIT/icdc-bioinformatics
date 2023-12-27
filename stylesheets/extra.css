@@ -8,6 +8,15 @@
     min-width: 11.5rem;
     background-color: rgb(203, 226, 238) !important;
     color: black;
-    /*background-color: #6c6c6c !important;*/
     font-size: medium;
+}
+
+.md-typeset table:not([class]) td {
+    vertical-align: middle;
+
+}
+
+.table {
+    font-size: medium;
+
 }
