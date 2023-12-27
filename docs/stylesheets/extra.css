@@ -6,7 +6,7 @@
 
 .md-typeset table:not([class]) th {
     min-width: 11.5rem;
-    background-color: #C3E1E6 !important;
+    background-color: rgb(203, 226, 238) !important;
     color: black;
     /*background-color: #6c6c6c !important;*/
     font-size: medium;
