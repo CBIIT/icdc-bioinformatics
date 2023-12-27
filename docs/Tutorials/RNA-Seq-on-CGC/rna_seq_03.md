@@ -13,7 +13,7 @@ All files available through the ICDC are open-access and can be exported into th
 
 ## Step 1: Filter cases using faceted search
 * Navigate to the [ICDC Explore Dashboard](https://caninecommons-qa.cancer.gov/#/explore)
-* Expand the "Study" facet and select UBC02
+* Expand the <span class="highlight_txt">Study</span> facet and select UBC02
 * Expand the "Study Participation" facet and select "Multiple Study"
 * From within the Dashboard table select 3 healthy controls and 3 diseased canines
 
