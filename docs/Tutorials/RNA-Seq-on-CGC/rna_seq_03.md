@@ -1,32 +1,27 @@
 ---
 layout: page
-title: Building a Cohort using the ICDC
+title: Building a Cohort within the ICDC
 
 ---
 
 
-Differential Gene Expression Analysis using the UBC02 Study
+Building a Cohort within the ICDC
 ============================================
 
-**RNA sequencing (RNA-Seq)** is a high throughput technique that provides qualitative and quantitative information about RNA biology including transcriptome-wide expression quantification, discovery of novel genes and gene isoforms, and differential expression. 
+The [Integrated Canine Data Commons (ICDC)] (https:https://caninecommons.cancer.gov/#/){:target="_blank"} is a cloud-based repository of spontaneously-arising canine cancer data from pet dogs established to further research on human cancers by enabling comparative analysis with canine cancer.
+All files available through the ICDC are open-access and can be exported into the CGC by any user. For this tutorial, we will conduct an example RNA-Seq analysis using 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals. 
 
-The goal of this tutorial is to enable you to: 
-
-1. create virtual cancer cohorts using the Integrated Canine Data Commons (ICDC). 
-2. analyze differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform for the ICDC.
-
-
-This example  RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  
-
-
-**Bioinformatic Pipeline**
-
-| Steps | Description|
-| ---|--------|
-| 1 | Select RNA-Seq files from the UBC02 study in the ICDC and export to the Cancer Genomics Cloud
-| 2 | Run samtools flagstat to get summary stats for each file |
-| 3  | Sort bam files by coordinate and name using samtools sort |
-| 4 | Run samtools view to inspect bam file headers|
-| 5  | Count sequencing reads that map to exons in the canine genome using htseq-count |
-| 6  | Download metadata file for bam files and reformat so that "Sample_ID" is the first column |
-| 7  | Run the DESeq2 app with appropriate inputs and computational settings to conduct differential expression between tumor and normal samples |
+##Step 1: Filter cases using faceted search
+* Navigate to the [ICDC Explore Dashboard]{target:="_blank"}
+* Expand the "Study" facet and select UBC02
+* Expand the "Study Participation" facet and select "Multiple Study"
+* From within the Dashboard table select 3 healthy controls and 3 diseased canines
+* Click on the "Add Associated Files" button
+* Click on the "My Files" icon in the top right of the navigation bar
+* Check to make sure there are 12 files in the cart
+* Expand the dropdown menu of the "Available Export Options" button
+* Click on "Export to Cancer Genomics Cloud"
+* Follow the prompt to login to the CGC or create an account if one does not yet exist
+* Select a Destination project from the dropdown menu or create a new project
+* Select the checkbox to agree to the CGC terms
+* Click on the "Import data" button
