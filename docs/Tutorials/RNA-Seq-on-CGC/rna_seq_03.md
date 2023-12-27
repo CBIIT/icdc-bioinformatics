@@ -13,21 +13,21 @@ All files available through the ICDC are open-access and can be exported into th
 
 ## Step 1: Filter cases using faceted search
 * Navigate to the [ICDC Explore Dashboard](https://caninecommons-qa.cancer.gov/#/explore)
-* Expand the <span class="highlight_txt">Study</span> facet and select UBC02
-* Expand the "Study Participation" facet and select "Multiple Study"
+* Expand the <span class="highlight_facet">Study</span> facet and select <span class="highlight_facetvalue">UBC02</span>
+* Expand the <span class="highlight_facet">Study Participation</span> facet and select <span class="highlight_facetvalue">Multiple Study"</span>
 * From within the Dashboard table select 3 healthy controls and 3 diseased canines
 
 ![ICDC Explore Dashboard](./rna-seq-images/icdc-explore-dashboard.png "ICDC Explore Dashboard")
 
 ## Step 2: Add files to the Cart
-* Click on the "Add Associated Files" button
-* Click on the "My Files" icon in the top right of the navigation bar
+* Click on the <span class="highlight_button">Add Associated Files"</span> button
+* Click on the <span class="highlight_icon">My Files"</span> icon in the top right of the navigation bar
 * Check to make sure there are 12 files in the cart
 
 ## Step 3: Export files to the Cancer Genomics Cloud
-* Expand the dropdown menu of the "Available Export Options" button
-* Click on "Export to Cancer Genomics Cloud"
+* Expand the dropdown menu of the <span class="highlight_button">Available Export Options"</span> button
+* Click on <span class="highlight_button">Export to Cancer Genomics Cloud"</span>
 * Follow the prompt to login to the CGC or create an account if one does not yet exist
-* Select a Destination project from the dropdown menu or create a new project
-* Select the checkbox to agree to the CGC terms
-* Click on the "Import data" button
+* Select a <span class="highlight_button">Destination project</span> from the dropdown menu or create a new project
+* Select the <span class="highlight_icon">checkbox</span> to agree to the CGC terms
+* Click on the <span class="highlight_button">"Import data"</span> button
