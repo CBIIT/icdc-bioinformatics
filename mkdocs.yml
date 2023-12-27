@@ -27,8 +27,10 @@ theme:
   #- Tutorials: 
       #- RNA-Seq on the CGC: rna-seq.md
 
+docs_dir: docs
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/style.css
 
 plugins:
    - search
