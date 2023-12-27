@@ -26,3 +26,18 @@
   background-color: #ededed;
   padding: .25em;
 }
+.highlight_facet {
+  color: #fca359;
+  background-color: #ededed;
+  padding: .25em;
+}
+.highlight_facetvalue {
+  color: #667a87;
+  background-color: #ededed;
+  padding: .25em;
+}
+.highlight_icon {
+  color: #1db634;
+  background-color: #ededed;
+  padding: .25em;
+}
