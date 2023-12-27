@@ -20,3 +20,9 @@
     font-size: medium;
 
 }
+
+.highlight_txt {
+  color: #9f0bde;
+  background-color: #ededed;
+  padding: .25em;
+}
