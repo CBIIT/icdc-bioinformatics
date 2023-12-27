@@ -8,7 +8,7 @@ title: Building a Cohort within the ICDC
 Building a Cohort within the ICDC
 ============================================
 
-The [Integrated Canine Data Commons (ICDC)] (https:https://caninecommons.cancer.gov/#/){:target="_blank"} is a cloud-based repository of spontaneously-arising canine cancer data from pet dogs established to further research on human cancers by enabling comparative analysis with canine cancer.
+The [Integrated Canine Data Commons](https:https://caninecommons.cancer.gov/#/) is a cloud-based repository of spontaneously-arising canine cancer data from pet dogs established to further research on human cancers by enabling comparative analysis with canine cancer.
 All files available through the ICDC are open-access and can be exported into the CGC by any user. For this tutorial, we will conduct an example RNA-Seq analysis using 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals. 
 
 ##Step 1: Filter cases using faceted search
