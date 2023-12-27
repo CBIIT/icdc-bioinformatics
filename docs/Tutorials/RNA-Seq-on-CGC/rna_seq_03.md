@@ -17,7 +17,7 @@ All files available through the ICDC are open-access and can be exported into th
 * Expand the "Study Participation" facet and select "Multiple Study"
 * From within the Dashboard table select 3 healthy controls and 3 diseased canines
 
-![ICDC Explore Dashboard](./rna-seq-images/icdc-explore-dashboard.png) "ICDC Explore Dashboard")
+![ICDC Explore Dashboard](./rna-seq-images/icdc-explore-dashboard.png "ICDC Explore Dashboard")
 
 ## Step 2: Add files to the Cart
 * Click on the "Add Associated Files" button
