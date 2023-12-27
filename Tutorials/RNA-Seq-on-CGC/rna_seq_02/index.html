@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#differential-gene-expression-analysis-using-the-ubc02-study" class="md-skip">
+        <a href="#introduction-to-rna-seq" class="md-skip">
           Skip to content
         </a>
       
@@ -469,53 +469,9 @@
 
 
 
-<h1 id="differential-gene-expression-analysis-using-the-ubc02-study">Differential Gene Expression Analysis using the UBC02 Study</h1>
-<p><strong>RNA sequencing (RNA-Seq)</strong> is a high throughput technique that provides qualitative and quantitative information about RNA biology including transcriptome-wide expression quantification, discovery of novel genes and gene isoforms, and differential expression. </p>
-<p>The goal of this tutorial is to enable you to: </p>
-<ol>
-<li>create virtual cancer cohorts using the Integrated Canine Data Commons (ICDC). </li>
-<li>analyze differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform for the ICDC.</li>
-</ol>
-<p>This example  RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  </p>
-<p><strong>Bioinformatic Pipeline</strong></p>
-<table>
-<thead>
-<tr>
-<th>Steps</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Select RNA-Seq files from the UBC02 study in the ICDC and export to the Cancer Genomics Cloud</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Run samtools flagstat to get summary stats for each file</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Sort bam files by coordinate and name using samtools sort</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Run samtools view to inspect bam file headers</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Count sequencing reads that map to exons in the canine genome using htseq-count</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Download metadata file for bam files and reformat so that "Sample_ID" is the first column</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Run the DESeq2 app with appropriate inputs and computational settings to conduct differential expression between tumor and normal samples</td>
-</tr>
-</tbody>
-</table>
+<div><h1 id="introduction-to-rna-seq">Introduction to RNA-Seq</h1>
+<p><strong>RNA sequencing (RNA-Seq)</strong> has revolutionized the study of the transcriptome. This highly senstitive assay can measure the expression across the transcriptome to provide insight into changes occurring in disease states, in response to therapies, under different environmental conditions, and many other study designs. RNA-Seq data enables researchers to identify transcript isoforms, gene fusions, single nucleotide polymorphisms, and other features.</p>
+<p>video.md</p></div>
 
               
             </article>
