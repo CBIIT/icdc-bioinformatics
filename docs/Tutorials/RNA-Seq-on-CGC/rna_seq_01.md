@@ -21,9 +21,9 @@ This example RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from
 
 **Table of Contents**
 
-| Steps | Description|
+| Lesson Name | Description|
 | ---|--------|
-| 1 | [Overview of RNA-Seq](./rna_seq_01.md)| History of RNA-Seq
-| 2 | [Building a Cohort on the ICDC](./rna_seq_02.md)|Build cohort on the ICDC and export files into the CGC |
-| 3  | [Navigating the CGC](./rna_seq_03.md) Set up project, inpsect files, and copy tools |
-| 4 | [Analyze sample files using pipeline]| Run samtools, htseq-count, and DESeq2|
+| [Overview of RNA-Seq](./rna_seq_01.md) | History of RNA-Seq
+| [Building a Cohort on the ICDC](./rna_seq_02.md) | Build cohort on the ICDC and export files into the CGC |
+| [Navigating the CGC](./rna_seq_03.md)  |  Set up project, inpsect files, and copy tools |
+| [Analyze sample files using pipeline] |  Run samtools, htseq-count, and DESeq2|
