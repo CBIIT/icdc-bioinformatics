@@ -411,9 +411,75 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Analysis within the Cancer Genomics Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Analysis within the Cancer Genomics Cloud
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-copy-tools-into-project" class="md-nav__link">
+    Step 1: Copy tools into project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-inspect-summary-stats-for-each-file-with-sambamba-flagstat" class="md-nav__link">
+    Step 2: Inspect summary stats for each file with sambamba flagstat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-inspect-bam-file-headers-with-samtools-view" class="md-nav__link">
+    Step 3: Inspect bam file headers with samtools view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-count-sequencing-reads-with-htseq-count" class="md-nav__link">
+    Step 4: Count sequencing reads with htseq-count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-generate-metadata-file-for-deseq2" class="md-nav__link">
+    Step 5: Generate metadata file for DESeq2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-conduct-differential-expression-with-deseq2" class="md-nav__link">
+    Step 6: Conduct differential expression with DESeq2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -453,6 +519,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-copy-tools-into-project" class="md-nav__link">
+    Step 1: Copy tools into project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-inspect-summary-stats-for-each-file-with-sambamba-flagstat" class="md-nav__link">
+    Step 2: Inspect summary stats for each file with sambamba flagstat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-inspect-bam-file-headers-with-samtools-view" class="md-nav__link">
+    Step 3: Inspect bam file headers with samtools view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-count-sequencing-reads-with-htseq-count" class="md-nav__link">
+    Step 4: Count sequencing reads with htseq-count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-generate-metadata-file-for-deseq2" class="md-nav__link">
+    Step 5: Generate metadata file for DESeq2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-conduct-differential-expression-with-deseq2" class="md-nav__link">
+    Step 6: Conduct differential expression with DESeq2
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -470,45 +586,12 @@
 
 
 <div><h1 id="analysis-within-the-cancer-genomics-cloud">Analysis within the Cancer Genomics Cloud</h1>
-<p><strong>Bioinformatic Pipeline</strong></p>
-<table>
-<thead>
-<tr>
-<th>Steps</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Select RNA-Seq files from the UBC02 study in the ICDC and export to the Cancer Genomics Cloud</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Run samtools flagstat to get summary stats for each file</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Sort bam files by coordinate and name using samtools sort</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Run samtools view to inspect bam file headers</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Count sequencing reads that map to exons in the canine genome using htseq-count</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Download metadata file for bam files and reformat so that "Sample_ID" is the first column</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Run the DESeq2 app with appropriate inputs and computational settings to conduct differential expression between tumor and normal samples</td>
-</tr>
-</tbody>
-</table></div>
+<h2 id="step-1-copy-tools-into-project">Step 1: Copy tools into project</h2>
+<h2 id="step-2-inspect-summary-stats-for-each-file-with-sambamba-flagstat">Step 2: Inspect summary stats for each file with sambamba flagstat</h2>
+<h2 id="step-3-inspect-bam-file-headers-with-samtools-view">Step 3: Inspect bam file headers with samtools view</h2>
+<h2 id="step-4-count-sequencing-reads-with-htseq-count">Step 4: Count sequencing reads with htseq-count</h2>
+<h2 id="step-5-generate-metadata-file-for-deseq2">Step 5: Generate metadata file for DESeq2</h2>
+<h2 id="step-6-conduct-differential-expression-with-deseq2">Step 6: Conduct differential expression with DESeq2</h2></div>
 
               
             </article>
