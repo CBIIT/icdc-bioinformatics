@@ -591,13 +591,19 @@
 <li>Click on Public Apps from the top navigation bar to expand the dropdown menu</li>
 <li>Select Workflows and Tools</li>
 <li>Click the Browse buttons app</li>
-<li>Use the search bar to find each tool listed below
-<strong> Sambamba Flagstat
-</strong> Samtools View
-<strong> Samtools Sort
-</strong> HTSeq-count
-** DESeq2</li>
-<li>For each tool, click the Copy button and then Select the appropriate project from the dropdown menu and then click the Copy button once more</li>
+<li>
+<p>Use the search bar to find each tool listed below</p>
+<ul>
+<li>Sambamba Flagstat</li>
+<li>Samtools View</li>
+<li>Samtools Sort</li>
+<li>HTSeq-count</li>
+<li>DESeq2</li>
+</ul>
+</li>
+<li>
+<p>For each tool, click the Copy button and then Select the appropriate project from the dropdown menu and then click the Copy button once more</p>
+</li>
 <li>Click on Projects from the main navigation bar to expand the dropdown menu and select the appropriate project name to return to the project</li>
 <li>Click on Apps from the secondary navigation bar to ensure all tools were effectively copied into the project
 <img alt="Tools loaded" src="../rna-seq-images/cgc-flagstat-results.png" title="Tools loaded"></li>
@@ -635,7 +641,7 @@
 <li>Under App Settings select name from the Order dropdown menu</li>
 <li>Under App Settings select ignore from the secondary alignments dropdown menu</li>
 <li>Under App Settings select ignore from the supplementary alignments dropdown menu
-<img alt="HTSeq-count" src="../rna-seq-images/cgc-flagstat-results.png" title="HTSeq-count"></li>
+<img alt="HTSeq-count" src="../rna-seq-images/cgc-htseq-results.png" title="HTSeq-count"></li>
 </ul>
 <h2 id="step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2">Step 5: Create a csv file with phenotype data for all samples for DESeq2</h2>
 <ul>
@@ -643,13 +649,13 @@
 <li>In the search box type .csv and hit enter</li>
 <li>Click on the file manifest which will be named with a series of letters and numbers with a .csv file extension</li>
 <li>Click on the Download button to initiate a download to your local machine
-<img alt="File Manifest" src="../rna-seq-images/cgc-flagstat-results.png" title="File Manifest"></li>
+<img alt="File Manifest" src="../rna-seq-images/cgc-download-manifest.png" title="File Manifest"></li>
 <li>Open this file in Excel or any similar application</li>
 <li>Move the sample_id column so that it is the first column in the file</li>
 <li>Delete all rows pertaining to the Index Files with a file_format of bai</li>
 <li>Save the file as phenotype_filtered.csv</li>
 <li>The file created should be formatted similar to the file shown below
-<img alt="phenotype_filtered.csv" src="../rna-seq-images/cgc-flagstat-results.png" title="phenotype_filtered.csv"></li>
+<img alt="phenotype_filtered.csv" src="../rna-seq-images/cgc-phenotype_filtered.png" title="phenotype_filtered.csv"></li>
 </ul>
 <h2 id="step-6-conduct-differential-expression-with-deseq2">Step 6: Conduct differential expression with DESeq2</h2></div>
 
