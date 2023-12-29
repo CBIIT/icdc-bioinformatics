@@ -14,11 +14,12 @@ Analysis within the Cancer Genomics Cloud (CGC)
 * Select Workflows and Tools
 * Click the Browse buttons app
 * Use the search bar to find each tool listed below
-** Sambamba Flagstat
-** Samtools View
-** Samtools Sort
-** HTSeq-count
-** DESeq2
+    - Sambamba Flagstat
+    - Samtools View
+    - Samtools Sort
+    - HTSeq-count
+    - DESeq2
+
 * For each tool, click the Copy button and then Select the appropriate project from the dropdown menu and then click the Copy button once more
 * Click on Projects from the main navigation bar to expand the dropdown menu and select the appropriate project name to return to the project
 * Click on Apps from the secondary navigation bar to ensure all tools were effectively copied into the project
@@ -52,18 +53,18 @@ Analysis within the Cancer Genomics Cloud (CGC)
 * Under App Settings select name from the Order dropdown menu
 * Under App Settings select ignore from the secondary alignments dropdown menu
 * Under App Settings select ignore from the supplementary alignments dropdown menu
-![HTSeq-count](./rna-seq-images/cgc-flagstat-results.png "HTSeq-count")
+![HTSeq-count](./rna-seq-images/cgc-htseq-results.png "HTSeq-count")
 ## Step 5: Create a csv file with phenotype data for all samples for DESeq2
 * Click on Files from the menu bar
 * In the search box type .csv and hit enter
 * Click on the file manifest which will be named with a series of letters and numbers with a .csv file extension
 * Click on the Download button to initiate a download to your local machine
-![File Manifest](./rna-seq-images/cgc-flagstat-results.png "File Manifest")
+![File Manifest](./rna-seq-images/cgc-download-manifest.png "File Manifest")
 * Open this file in Excel or any similar application
 * Move the sample_id column so that it is the first column in the file
 * Delete all rows pertaining to the Index Files with a file_format of bai
 * Save the file as phenotype_filtered.csv
 * The file created should be formatted similar to the file shown below
-![phenotype_filtered.csv](./rna-seq-images/cgc-flagstat-results.png "phenotype_filtered.csv")
+![phenotype_filtered.csv](./rna-seq-images/cgc-phenotype_filtered.png "phenotype_filtered.csv")
 
 ## Step 6: Conduct differential expression with DESeq2
