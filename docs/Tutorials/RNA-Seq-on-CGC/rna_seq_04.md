@@ -12,7 +12,7 @@ Analysis within the Cancer Genomics Cloud (CGC)
 ## Step 1: Copy tools into project
 * Click on <span class="highlight_text">Public Apps</span> from the top navigation bar to expand the dropdown menu
 * Select Workflows and Tools
-* Click the <span class="highlight_button">Browse</span> apps button
+* Click the <span class="highlight_button">Browse apps</span> button
 * Use the search bar to find each tool listed below
     - Sambamba Flagstat
     - Samtools View
