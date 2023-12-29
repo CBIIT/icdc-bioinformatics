@@ -21,7 +21,7 @@
 
 }
 
-.highlight_txt {
+.highlight_text {
   color: #9f0bde;
   background-color: #ededed;
   padding: .25em;
@@ -38,6 +38,11 @@
 }
 .highlight_icon {
   color: #1db634;
+  background-color: #ededed;
+  padding: .25em;
+}
+.highlight_button {
+  color: #60ADCF;
   background-color: #ededed;
   padding: .25em;
 }
