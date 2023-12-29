@@ -38,4 +38,5 @@ plugins:
    
 markdown_extensions:
    - pymdownx.snippets
+      base_path: ["docs/"]
  
