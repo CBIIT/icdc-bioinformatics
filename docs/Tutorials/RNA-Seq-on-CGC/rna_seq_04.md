@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Analysis within the Cancer Genomics Cloud
+title: Analysis within the Cancer Genomics Cloud (CGC)
 
 ---
 
 
-Analysis within the Cancer Genomics Cloud
+Analysis within the Cancer Genomics Cloud (CGC)
 ============================================
 
 
@@ -53,5 +53,17 @@ Analysis within the Cancer Genomics Cloud
 * Under App Settings select ignore from the secondary alignments dropdown menu
 * Under App Settings select ignore from the supplementary alignments dropdown menu
 ![HTSeq-count](./rna-seq-images/cgc-flagstat-results.png "HTSeq-count")
-## Step 5: Generate metadata file for DESeq2
+## Step 5: Create a csv file with phenotype data for all samples for DESeq2
+* Click on Files from the menu bar
+* In the search box type .csv and hit enter
+* Click on the file manifest which will be named with a series of letters and numbers with a .csv file extension
+* Click on the Download button to initiate a download to your local machine
+![File Manifest](./rna-seq-images/cgc-flagstat-results.png "File Manifest")
+* Open this file in Excel or any similar application
+* Move the sample_id column so that it is the first column in the file
+* Delete all rows pertaining to the Index Files with a file_format of bai
+* Save the file as phenotype_filtered.csv
+* The file created should be formatted similar to the file shown below
+![phenotype_filtered.csv](./rna-seq-images/cgc-flagstat-results.png "phenotype_filtered.csv")
+
 ## Step 6: Conduct differential expression with DESeq2
