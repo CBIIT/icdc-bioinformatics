@@ -23,7 +23,7 @@ Analysis within the Cancer Genomics Cloud (CGC)
 * For each tool, click the Copy button and then Select the appropriate project from the dropdown menu and then click the Copy button once more
 * Click on Projects from the main navigation bar to expand the dropdown menu and select the appropriate project name to return to the project
 * Click on Apps from the secondary navigation bar to ensure all tools were effectively copied into the project
-![Tools loaded](./rna-seq-images/cgc-flagstat-results.png "Tools loaded")
+![Tools loaded](./rna-seq-images/cgc-apps-loaded.png "Tools loaded")
 
 ## Step 2: Inspect summary stats for each file with Sambamba Flagstat
 * Click on Sambamba Flagstat
