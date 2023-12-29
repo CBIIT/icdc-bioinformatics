@@ -17,7 +17,7 @@
     
     
       
-        <title>Analysis within the Cancer Genomics Cloud - The Integrated Canine Data Commons Bioinformatics Training Center</title>
+        <title>Analysis within the Cancer Genomics Cloud (CGC) - The Integrated Canine Data Commons Bioinformatics Training Center</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analysis-within-the-cancer-genomics-cloud" class="md-skip">
+        <a href="#analysis-within-the-cancer-genomics-cloud-cgc" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Analysis within the Cancer Genomics Cloud
+              Analysis within the Cancer Genomics Cloud (CGC)
             
           </span>
         </div>
@@ -412,12 +412,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Analysis within the Cancer Genomics Cloud
+          Analysis within the Cancer Genomics Cloud (CGC)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Analysis within the Cancer Genomics Cloud
+        Analysis within the Cancer Genomics Cloud (CGC)
       </a>
       
         
@@ -464,8 +464,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-generate-metadata-file-for-deseq2" class="md-nav__link">
-    Step 5: Generate metadata file for DESeq2
+  <a href="#step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2" class="md-nav__link">
+    Step 5: Create a csv file with phenotype data for all samples for DESeq2
   </a>
   
 </li>
@@ -554,8 +554,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-generate-metadata-file-for-deseq2" class="md-nav__link">
-    Step 5: Generate metadata file for DESeq2
+  <a href="#step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2" class="md-nav__link">
+    Step 5: Create a csv file with phenotype data for all samples for DESeq2
   </a>
   
 </li>
@@ -585,7 +585,7 @@
 
 
 
-<div><h1 id="analysis-within-the-cancer-genomics-cloud">Analysis within the Cancer Genomics Cloud</h1>
+<div><h1 id="analysis-within-the-cancer-genomics-cloud-cgc">Analysis within the Cancer Genomics Cloud (CGC)</h1>
 <h2 id="step-1-copy-tools-into-project">Step 1: Copy tools into project</h2>
 <ul>
 <li>Click on Public Apps from the top navigation bar to expand the dropdown menu</li>
@@ -637,7 +637,20 @@
 <li>Under App Settings select ignore from the supplementary alignments dropdown menu
 <img alt="HTSeq-count" src="../rna-seq-images/cgc-flagstat-results.png" title="HTSeq-count"></li>
 </ul>
-<h2 id="step-5-generate-metadata-file-for-deseq2">Step 5: Generate metadata file for DESeq2</h2>
+<h2 id="step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2">Step 5: Create a csv file with phenotype data for all samples for DESeq2</h2>
+<ul>
+<li>Click on Files from the menu bar</li>
+<li>In the search box type .csv and hit enter</li>
+<li>Click on the file manifest which will be named with a series of letters and numbers with a .csv file extension</li>
+<li>Click on the Download button to initiate a download to your local machine
+<img alt="File Manifest" src="../rna-seq-images/cgc-flagstat-results.png" title="File Manifest"></li>
+<li>Open this file in Excel or any similar application</li>
+<li>Move the sample_id column so that it is the first column in the file</li>
+<li>Delete all rows pertaining to the Index Files with a file_format of bai</li>
+<li>Save the file as phenotype_filtered.csv</li>
+<li>The file created should be formatted similar to the file shown below
+<img alt="phenotype_filtered.csv" src="../rna-seq-images/cgc-flagstat-results.png" title="phenotype_filtered.csv"></li>
+</ul>
 <h2 id="step-6-conduct-differential-expression-with-deseq2">Step 6: Conduct differential expression with DESeq2</h2></div>
 
               
