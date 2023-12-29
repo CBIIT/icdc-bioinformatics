@@ -8,6 +8,8 @@ theme:
    name: material
    palette:
     primary: custom
+   font:
+      text: Arial
    logo: assets/canine_bubble.png
    favicon: images/canine_bubble.png
    icon: 
