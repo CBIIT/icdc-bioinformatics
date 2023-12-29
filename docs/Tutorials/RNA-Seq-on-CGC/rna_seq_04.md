@@ -45,15 +45,30 @@ Analysis within the Cancer Genomics Cloud (CGC)
 * Click on Select file(s) dropdown menu associated with the Input BAM/SAM/CRAM file
 * Select all bam files by clicking on the respective checkboxes
 * Click on the Save selection button on the top right-hand side
-* Click on the Run button on the top right-hand side 
+* Click on the Run button on the top right-hand side
+
+
+## Step 5: Load the appropriate reference annotation file
+In order to count gene features across exons HtSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3. 
+* Download the GTF file located here https://hgdownload.soe.ucsc.edu/goldenPath/canFam3/bigZips/genes/
+* Click on canFam3.ncbiRefSeq.gtf.gz
+* Locate this file on your local computer and open to unzip
+* Navigate back to the CGC and add this file to the project
 ## Step 4: Count sequencing reads with htseq-count
 * Click on Apps from the secondary navigation menu 
-* Click on HTSeq-count
+* Click HTSeq-count
 * Click on the Run button from the top right-hand side
 * Under App Settings select name from the Order dropdown menu
 * Under App Settings select ignore from the secondary alignments dropdown menu
 * Under App Settings select ignore from the supplementary alignments dropdown menu
+* Click on the toggle to turn Batching On
+* Select File from the Batch by dropdown menu 
+* Click on the Select file(s) button associated with Aligned reads
+* Select all name sorted bam files from the name_sorted folder
+* Click on the Select file(s) button associated with Reference annotation file
+* Select canFam3.ncbiRefSeq.gtf.gz
 ![HTSeq-count](./rna-seq-images/cgc-htseq-results.png "HTSeq-count")
+
 ## Step 5: Create a csv file with phenotype data for all samples for DESeq2
 * Click on Files from the menu bar
 * In the search box type .csv and hit enter
@@ -66,5 +81,38 @@ Analysis within the Cancer Genomics Cloud (CGC)
 * Save the file as phenotype_filtered.csv
 * The file created should be formatted similar to the file shown below
 ![phenotype_filtered.csv](./rna-seq-images/cgc-phenotype_filtered.png "phenotype_filtered.csv")
+* Click on the Add files button to expand the dropdown menu and select Your Computer
+* Click on the Browse files button to add the file created named phenotype_filtered.csv
+* Click on the green Start upload button
 
 ## Step 6: Conduct differential expression with DESeq2
+* Click on Apps from the menu bar
+* Click DESeq2 
+* Click on the Run button from the top right-hand side
+* Under App Settings enter Urinary_Bladder_Cancer_DGE as the Analysis title
+* Under App Settings enter diagnosis as the Covariate of interest
+* Under App Settings enter 0.01 as the FDR cutoff
+* Under App Settings enter Healthy Control as the Factor level - reference
+* Under App Settings enter Bladder Cancer as the Factor level - test
+* Under App Settings select htseq from the dropdown menu of Quantification tool
+* Under App Settings select True from the dropdown menu of log2 fold change shrinkage
+* Under Inputs click on the Select file(s) button associated with Expression data
+    * Select the counts.tsv files from the Counts folder
+* Under Inputs click on the Select file(s) button associated with Gene annotation
+    * Select canFam3.ncbiRefSeq.gtf
+* Under Inputs click on the Select file(s) button associated with Phenotype data
+    * Select phenotype_filtered.csv
+
+![DESeq2 Parameters](./rna-seq-images/cgc-deseq2-parameters.png "DESeq2 Parameters")
+
+* Click on the green Run button in the upper right-hand corner
+* When the task has completed successfully inspect the results that should be the same as shown below
+
+`` title=".browserslistrc"
+--8<-- "["DESeq2 Results"](../../../files/Urinary_Bladder_Cancer_DGE.deseq2.1.26.0.summary_report.b64html)
+```
+
+
+
+
+
