@@ -28,11 +28,11 @@ All files available through the ICDC are open-access and can be exported into th
 
 ## Step 3: Export files to the Cancer Genomics Cloud
 * Check to make sure there are 12 files in the cart
-* Expand the dropdown menu of the <span class="highlight_button">Available Export Options"</span> button
-* Click on <span class="highlight_button">Export to Cancer Genomics Cloud"</span>
+* Expand the dropdown menu of the <span class="highlight_button">Available Export Options</span> button
+* Click on <span class="highlight_button">Export to Cancer Genomics Cloud</span>
 * Follow the prompt to login to the CGC or create an account if one does not yet exist
 * Select a <span class="highlight_button">Destination project</span> from the dropdown menu or create a new project
 * Select the <span class="highlight_icon">checkbox</span> to agree to the CGC terms
-* Click on the <span class="highlight_button">"Import data"</span> button
+* Click on the <span class="highlight_button">Import data</span> button
 
 ![ICDC My Files Cart Page](./rna-seq-images/icdc-loaded-cart.png "My Files Cart page")

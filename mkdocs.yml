@@ -37,5 +37,10 @@ extra_css:
 plugins:
    - search
    - awesome-pages
+
+edit_uri: ""
+extra:
+  analytics:
+    property: G-XT3KGMHSY8
    
  

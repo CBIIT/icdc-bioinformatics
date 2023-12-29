@@ -49,7 +49,7 @@ Analysis within the Cancer Genomics Cloud (CGC)
 
 
 ## Step 5: Load the appropriate reference annotation file
-In order to count gene features across exons HtSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3. 
+In order to count gene features across exons the HTSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3. 
 * Download the GTF file located here https://hgdownload.soe.ucsc.edu/goldenPath/canFam3/bigZips/genes/
 * Click on canFam3.ncbiRefSeq.gtf.gz
 * Locate this file on your local computer and open to unzip
