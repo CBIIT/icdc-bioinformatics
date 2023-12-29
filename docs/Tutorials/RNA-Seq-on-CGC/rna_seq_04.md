@@ -108,8 +108,8 @@ In order to count gene features across exons HtSeq-count tool will need a Gene T
 * Click on the green Run button in the upper right-hand corner
 * When the task has completed successfully inspect the results that should be the same as shown below
 
-`` title=".browserslistrc"
---8<-- "["DESeq2 Results"](../../../files/Urinary_Bladder_Cancer_DGE.deseq2.1.26.0.summary_report.b64html)
+`` title="DESeq2 Results"
+--8<-- "Urinary_Bladder_Cancer_DGE.deseq2.1.26.0.summary_report.b64html"
 ```
 
 

@@ -35,5 +35,7 @@ extra_css:
 plugins:
    - search
    - awesome-pages
-   - mkdocs-video
+   
+markdown_extensions:
+   - pymdownx.snippets
  
