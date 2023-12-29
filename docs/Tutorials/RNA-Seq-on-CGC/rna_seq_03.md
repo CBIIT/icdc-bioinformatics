@@ -21,8 +21,8 @@ All files available through the ICDC are open-access and can be exported into th
 
 ## Step 2: Add files to the Cart
 * From within the Dashboard table select 3 healthy controls and 3 diseased canines
-* Click on the <span class="highlight_button">Add Associated Files"</span> button
-* Click on the <span class="highlight_icon">My Files"</span> icon in the top right of the navigation bar
+* Click on the <span class="highlight_button">Add Associated Files</span> button
+* Click on the <span class="highlight_icon">My Files</span> icon in the top right of the navigation bar
 ![ICDC Dashboard Table](./rna-seq-images/icdc-dashboard-table.png "Dashboard Table")
 
 
