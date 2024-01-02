@@ -42,5 +42,10 @@ edit_uri: ""
 extra:
   analytics:
     property: G-XT3KGMHSY8
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
    
  
