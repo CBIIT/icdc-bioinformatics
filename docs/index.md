@@ -12,10 +12,6 @@ This website contains a library of tutorials for the Integrated Canine Data Comm
 
 ![ICDC Studies](./images/icdc-select-study.png "ICDC Studies")
 
-=== "Export Data to the CGC"
-
-    1. Sed sagittis eleifend rutrum
-    2. Donec vitae suscipit est
-    3. Nulla tempor lobortis orci
 
 === "Conduct Analysis with CGC Tools & Workflows"
+![CGC Analysis](./Tutorials/RNA-Seq-on-CGC/rna-seq-images/cgc-dispersion.png "CGC Analysis")
