@@ -29,7 +29,7 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 ![Tools loaded](./rna-seq-images/cgc-apps-loaded.png "Tools loaded")
 
 !!! info
-    Before conducting RNA-Seq it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.
+    Before conducting differential expession analysis it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.
 ## Step 2: Inspect summary stats for each file with Sambamba Flagstat
 * Click on Sambamba Flagstat
 * Click on the <span class="highlight_button">Run</span> button from the top right-hand side
@@ -42,7 +42,7 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 ![Samtools Flagstat](./rna-seq-images/cgc-flagstat-results.png "Samtools Flagstat")
 
 !!! info
-    Before conducting RNA-Seq it is important to determine which reference genome was used to generate the BAM files and how the BAM file is sorted.
+    Before conducting differential expression analysis it is important to determine which reference genome was used to generate the BAM files and how the BAM file is sorted.
 ## Step 3: Inspect bam file headers with Samtools View
 * Click on <span class="highlight_text">Apps</span> from the menu bar
 * Click on Samtools View
@@ -81,7 +81,7 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 ![HTSeq-count](./rna-seq-images/cgc-htseq-results.png "HTSeq-count")
 
 !!! info
-    Before conducting differential expression a file must be derived to tell DESeq2 how the samples relate to one another. For this tutorial, we can easily generate this file using our exported file manifest from the ICDC.
+    Before conducting differential expression analysis a file must be derived to tell DESeq2 how the samples relate to one another. For this tutorial, we can easily generate this file using our exported file manifest from the ICDC.
 ## Step 5: Create a csv file with phenotype data for all samples for DESeq2
 
 * Click on <span class="highlight_text">Files</span> from the menu bar
