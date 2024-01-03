@@ -6,4 +6,4 @@ title: About
 Welcome to the ICDC Training Resources
 ========================================================
 
-A little bit about the data of the ICDC.
+The ICDC team is the best.
