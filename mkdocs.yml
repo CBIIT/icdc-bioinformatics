@@ -37,6 +37,7 @@ extra_css:
 plugins:
    - search
    - awesome-pages
+   - open-in-new-tab
 
 edit_uri: ""
 extra:

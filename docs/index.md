@@ -6,12 +6,17 @@ title: Home
 Welcome to the Canine Agility Training Center
 ========================================================
 
-This website contains a library of tutorials for the Integrated Canine Data Commons.
+This website contains a library of tutorials for the Integrated Canine Data Commons (ICDC) and the interoperability with the Cancer Genomics Cloud (CGC).
+
 
 === "Explore ICDC Data"
 
-![ICDC Studies](./images/icdc-select-study.png "ICDC Studies")
+  
+    [![ICDC Data](./images/icdc-explore-dashboard2.png)](https://caninecommons.cancer.gov/#/explore)
+ 
 
+=== "Conduct Anaylysis in the CGC"
 
-=== "Conduct Analysis with CGC Tools & Workflows"
-![CGC Analysis](./Tutorials/RNA-Seq-on-CGC/rna-seq-images/cgc-dispersion.png "CGC Analysis")
+    [![CGC Analysis](./Tutorials/RNA-Seq-on-CGC/rna-seq-images/cgc-dispersion.png)]("https://www.cancergenomicscloud.org/")
+
+   
