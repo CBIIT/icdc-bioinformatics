@@ -19,9 +19,6 @@ This website contains a library of tutorials for exploring data within the Integ
 
     [![CGC Analysis](./Tutorials/RNA-Seq-on-CGC/rna-seq-images/cgc-dispersion.png)](https://www.cancergenomicscloud.org/)
 
-!!! note
-    This is a collapsible note
 
-    You can add a `+` character to force the box to be initially open `???+`
 
    
