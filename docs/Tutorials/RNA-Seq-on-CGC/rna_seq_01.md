@@ -12,10 +12,10 @@ Differential Gene Expression Analysis on the Cancer Genomics Cloud (CGC)
 
 !!! tip "Tutorial Goal"
     1. Create virtual cancer cohorts using the Integrated Canine Data Commons (ICDC). 
-    2. Conduct differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform for the ICDC.
+    2. Conduct differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform that interoperates with the ICDC.
 
-
-This example RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  
+!!! note
+    This example RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  
 
 
 **Table of Contents**
