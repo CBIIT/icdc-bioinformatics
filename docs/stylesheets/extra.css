@@ -4,6 +4,16 @@
     --md-primary-fg-color--dark:  #8DCAFF;
   }
 
+.md-footer-nav {
+    background-color: hsl(212, 25%, 87%) !important;
+}
+
+.md-footer-meta {
+  background-color: #142D64 !important;
+  border-top: 1px solid #142D64 !important;
+  padding: 0.05rem;
+}
+
 .md-typeset table:not([class]) th {
     min-width: 11.5rem;
     background-color: rgb(203, 226, 238) !important;
@@ -19,6 +29,10 @@
 .table {
     font-size: medium;
 
+}
+
+.medium {
+  color: #00AB6C;
 }
 
 .highlight_text {
@@ -45,4 +59,7 @@
   color: #60ADCF;
   background-color: #ededed;
   padding: .25em;
+}
+html .md-footer-social a[title="Twitter"] {
+  color: #e4eaed;
 }

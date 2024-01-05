@@ -37,6 +37,7 @@ theme:
       - navigation.path
       - navigation.top
       - navigation.expand 
+      - navigation.footer
 
 #nav:
   #- Home: index.md
@@ -56,15 +57,21 @@ plugins:
    - glightbox
 
 edit_uri: ""
+
 extra:
-  analytics:
-    property: G-XT3KGMHSY8
+  hypothesis: true
+  
+  social:
+   - icon: fontawesome/brands/twitter
+     link: https://twitter.com/NCIDataSci
+
 
 markdown_extensions:
-  - admonition
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
+- admonition
+- attr_list
+- pymdownx.superfences
+- pymdownx.tabbed:
+   alternate_style: true
 
    
  
