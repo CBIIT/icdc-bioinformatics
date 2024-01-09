@@ -3,7 +3,7 @@ layout: page
 title: Home
 ---
 
-Welcome to the Canine Agility Training Center
+Welcome to the ICDC Bioinformatics Training Center
 ========================================================
 
 This website contains a library of tutorials for exploring data within the Integrated Canine Data Commons (ICDC) and conducting analysis using the connected cloud resource, the Cancer Genomics Cloud (CGC).
