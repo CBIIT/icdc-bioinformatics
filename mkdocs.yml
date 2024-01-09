@@ -65,7 +65,7 @@ extra:
    - icon: fontawesome/brands/twitter
      link: https://twitter.com/NCIDataSci
    - icon: fontawesome/solid/envelope
-     link: mailto:icdchelpdesk.nih.gov>
+     link: mailto:icdchelpdesk@nih.gov>
 
 
 markdown_extensions:
