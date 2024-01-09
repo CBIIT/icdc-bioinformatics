@@ -51,8 +51,8 @@ extra_css:
   - stylesheets/style.css
 
 plugins:
-   - search
-   - awesome-pages
+   - search # must enable explicitly if there is a plugins block
+   - awesome-pages # simplifies configuring page titles and their order https://pypi.org/project/mkdocs-awesome-pages-plugin/
    - open-in-new-tab
    - glightbox
 
@@ -64,6 +64,8 @@ extra:
   social:
    - icon: fontawesome/brands/twitter
      link: https://twitter.com/NCIDataSci
+   - icon: fontawesome/solid/envelope
+     link: mailto:icdchelpdesk.nih.gov>
 
 
 markdown_extensions:
