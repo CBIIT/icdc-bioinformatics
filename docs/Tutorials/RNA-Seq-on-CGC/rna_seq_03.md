@@ -21,7 +21,8 @@ All files available through the ICDC are open-access and can be exported to the 
 ![ICDC Explore Dashboard](./rna-seq-images/icdc-explore-dashboard.png "ICDC Explore Dashboard")
 
 !!! info
-    The ICDC Dashboard makes it very simple to load files of interest into the "My Files" Cart page. After applying desired filters, either click on the Add Assoicated Files for All button to add files for every case listed in the Dashboard table or select cases of interest by clicking on the checkboxes and then click on the Add Files for Selected Cases button. For this tutorial we will select a total of 6 cases.
+    The ICDC Dashboard makes it very simple to load files of interest into the "My Files" Cart page. After applying desired filters, either click on the Add Files for All Cases button to add files for every case listed in the Dashboard table or explicitly select cases of interest by clicking on the checkboxes and then click on the Add Files for Selected Cases button. For this tutorial we will select a total of 6 cases and add files for those cases.
+
 ## Step 2: Add files to the Cart
 * From within the Dashboard table click on the checkbox corresponding to 3 healthy controls and 3 diseased canines
 * Click on the <span class="highlight_button">Add Files for Selected Cases</span> button
@@ -29,9 +30,9 @@ All files available through the ICDC are open-access and can be exported to the 
 ![ICDC Dashboard Table](./rna-seq-images/icdc-dashboard-table.png "Dashboard Table")
 
 !!! info
-    The ICDC "My Files" Cart page enables users to view files of interest in JBrowse a next generation genome browser, export these files into the CGC, or download a file manifest containing metadata describing each to their local computer. For this tutorial, we will be exporting our files directly in the CGC.
+    The ICDC "My Files" Cart page enables users to view files of interest in JBrowse, a next generation genome browser, export these files to the CGC, and/or download a file manifest containing metadata describing each file to their local computer. For this tutorial, we will be exporting our files directly to the CGC.
     
-## Step 3: Export files from the Cart to the Cancer Genomics Cloud
+## Step 3: Export files in the Cart to the Cancer Genomics Cloud (CGC)
 * Click on the <span class="highlight_icon">My Files</span> icon in the top right of the navigation bar
 * Check to make sure there are 12 files in the cart
 * Expand the dropdown menu of the <span class="highlight_button">Available Export Options</span> button
