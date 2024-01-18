@@ -22,7 +22,7 @@ Differential Gene Expression Analysis on the Cancer Genomics Cloud (CGC)
 
 | Lesson Name | Description|
 | ---|--------|
-| [Overview of RNA-Seq](./rna_seq_01.md) | History of RNA-Seq
-| [Building a Cohort on the ICDC](./rna_seq_02.md) | Build cohort on the ICDC and export files into the CGC |
-| [Navigating the CGC](./rna_seq_03.md)  |  Set up project, inspect files, and copy tools |
-| [Analyze sample files using pipeline](./rna_seq_04.md) |  Run samtools, htseq-count, and DESeq2|
+| [Overview of RNA-Seq](./rna_seq_02.md) | History of RNA-Seq
+| [Building a Cohort on the ICDC](./rna_seq_03.md) | Build cohort on the ICDC and export files into the CGC |
+| [Navigating the CGC](./rna_seq_04.md)  |  Set up project, inspect files, and copy tools |
+| [Analyze sample files using pipeline](./rna_seq_05.md) |  Run samtools, htseq-count, and DESeq2|
