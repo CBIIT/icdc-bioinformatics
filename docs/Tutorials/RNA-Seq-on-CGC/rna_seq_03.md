@@ -9,10 +9,10 @@ Building a Cohort within the ICDC
 ============================================
 
 The [Integrated Canine Data Commons](https:https://caninecommons.cancer.gov/#/) is a cloud-based repository of spontaneously-arising canine cancer data from pet dogs established to further research on human cancers by enabling comparative analysis with canine cancer.
-All files available through the ICDC are open-access and can be exported into the CGC by any user. For this tutorial, we will conduct an example RNA-Seq analysis using 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals. 
+All files available through the ICDC are open-access and can be exported to the CGC by any user. For this tutorial, we will conduct an example RNA-Seq analysis using 6 Binary Alignment Mapping (BAM) files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals. 
 
 !!! info
-    The ICDC has a comprehensive menu of faceted values that can be used to filter data by cases, sample, and files. For example, data can be filtered by the disease diagnosis, the sample pathology, or file format. Specific cases of interest can be found entering the case IDs or uploading a list of case IDs. For this tutorial we will filter by the UBC02 study and select cases that were associated with multiple studies.
+    The ICDC has a comprehensive menu of faceted values that can be used to filter data by cases, sample, and files. For example, data can be filtered by the disease diagnosis, the sample pathology, or file format. Specific cases of interest can be found entering the case IDs or uploading a list of case IDs. For this tutorial we will filter by the UBC02 study and select cases that are associated with multiple studies.
 ## Step 1: Filter cases using faceted search
 * Navigate to the [ICDC Explore Dashboard](https://caninecommons-qa.cancer.gov/#/explore)
 * Expand the <span class="highlight_facet">Study</span> facet and select <span class="highlight_facetvalue">UBC02</span>
