@@ -18,6 +18,7 @@ If this is the first time you are working within the CGC you will need to create
 * Click on the <span class="highlight_button">Create a project</span> button at the bottom of the menu
 * In the Create a project modal that opens, provide a name, select the appropriate Billing group and Location and ensure Spot instances and Reuse is checked under Execution settings. 
 ![Create project](./rna-seq-images/cgc-create-project.png "Create project")
+* Add files to the new projedt using the instructions in the [rna_seq_03.md](Building a Cohort within the ICDC) section
 
 ## Step 1: Add ICDC files to project
 Add files to the newly created project using the Building a Cohort within the ICDC tutorial section
