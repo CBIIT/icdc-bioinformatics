@@ -13,12 +13,12 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
     Each new user to the CGC will be provided with $300 of pilot funding, courtesy of the NCI. 
 
 ## Step 0: Create a CGC project 
-If this is the first time you are working within the CGC you will need to create a project to serve as a container to hold the files from the ICDC, the tools and apps from the CGC, and the generated analysis output files. 
+# If this is the first time you are working within the CGC you will need to create a project to serve as a container to hold the files from the ICDC, the tools and apps from the CGC, and the generated analysis output files. 
 * Click on <span class="highlight_text">Projects</span> from the top navigation bar to expand the dropdown menu
 * Click on the <span class="highlight_button">Create a project</span> button at the bottom of the menu
 * In the Create a project modal that opens, provide a name, select the appropriate Billing group and Location and ensure Spot instances and Reuse is checked under Execution settings. 
 ![Create project](./rna-seq-images/cgc-create-project.png "Create project")
-* Add files to the new projedt using the instructions in the [rna_seq_03.md](Building a Cohort within the ICDC) section
+* Add files to the new project using the instructions in the [Building a Cohort within the ICDC](rna_seq_03.md) section
 
 ## Step 1: Add ICDC files to project
 Add files to the newly created project using the Building a Cohort within the ICDC tutorial section
