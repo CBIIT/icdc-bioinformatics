@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://cbiit.github.io/icdc-bioinformatics/Tutorials/RNA-Seq-on-CGC/rna_seq_01/">
+        <link rel="canonical" href="https://cbiit.github.io/icdc-bioinformatics/Tutorials/RNA-Seq-on-CGC/rna_seq_05/">
       
       <link rel="icon" href="../../../images/canine_bubble.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.11">
     
     
       
-        <title>RNA-Seq Tutorial Overview - The Integrated Canine Data Commons Bioinformatics Training Center</title>
+        <title>Analysis within the Cancer Genomics Cloud (CGC) - The Integrated Canine Data Commons Bioinformatics Training Center</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#differential-gene-expression-analysis-on-the-cancer-genomics-cloud-cgc" class="md-skip">
+        <a href="#analysis-within-the-cancer-genomics-cloud-cgc" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RNA-Seq Tutorial Overview
+              Analysis within the Cancer Genomics Cloud (CGC)
             
           </span>
         </div>
@@ -223,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../rna_seq_01/" class="md-tabs__link md-tabs__link--active">
         Tutorials
       </a>
     </li>
@@ -369,21 +369,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../rna_seq_01/" class="md-nav__link">
         RNA-Seq Tutorial Overview
       </a>
-      
     </li>
   
 
@@ -464,6 +454,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-inspect-summary-stats-for-each-file-with-sambamba-flagstat" class="md-nav__link">
+    Step 1: Inspect summary stats for each file with Sambamba Flagstat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-inspect-bam-file-headers-with-samtools-view" class="md-nav__link">
+    Step 2: Inspect bam file headers with Samtools View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-load-the-appropriate-reference-annotation-file" class="md-nav__link">
+    Step 3: Load the appropriate reference annotation file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-count-sequencing-reads-with-htseq-count" class="md-nav__link">
+    Step 4: Count sequencing reads with htseq-count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2" class="md-nav__link">
+    Step 5: Create a csv file with phenotype data for all samples for DESeq2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-conduct-differential-expression-with-deseq2" class="md-nav__link">
+    Step 6: Conduct differential expression with DESeq2
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -476,46 +516,131 @@
                 
 
 
-<h1 id="differential-gene-expression-analysis-on-the-cancer-genomics-cloud-cgc">Differential Gene Expression Analysis on the Cancer Genomics Cloud (CGC)</h1>
-<p><strong>RNA sequencing (RNA-Seq)</strong> is a high throughput technique that provides qualitative and quantitative information about RNA biology including transcriptome-wide expression quantification, discovery of novel genes and gene isoforms, and differential expression. </p>
-<div class="admonition tip">
-<p class="admonition-title">Tutorial Goal</p>
-<ol>
-<li>Create virtual cancer cohorts using the Integrated Canine Data Commons (ICDC). </li>
-<li>Conduct differential gene expression (DGE) within the Cancer Genomics Cloud (CGC), the cloud analysis platform that interoperates with the ICDC.</li>
-</ol>
+<h1 id="analysis-within-the-cancer-genomics-cloud-cgc">Analysis within the Cancer Genomics Cloud (CGC)</h1>
+<p>The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded by the National Cancer Institute. The CGC is a cloud-based technology that enables analysis, storage, and computation of large cancer datasets. The CGC interoperates with the ICDC making it easier than ever to move from data acquisition to data analysis.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before conducting differential expession analysis it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This example RNA-Seq analysis uses 6 Binary Alignment Mapping files derived from 6 canine individuals enrolled in the UBC02 study.  3 files are from tumor tissues sequenced from diseased individuals and 3 files are from normal tissues sequenced from healthy individuals.  </p>
+<h2 id="step-1-inspect-summary-stats-for-each-file-with-sambamba-flagstat">Step 1: Inspect summary stats for each file with Sambamba Flagstat</h2>
+<ul>
+<li>Click on Sambamba Flagstat</li>
+<li>Click on the <span class="highlight_button">Run</span> button from the top right-hand side</li>
+<li>Click on the toggle to turn Batching On</li>
+<li>Select File from the Batch by dropdown menu</li>
+<li>Click on Input alignments</li>
+<li>Select all bam files by clicking on the respective checkboxes</li>
+<li>Click on the <span class="highlight_button">Save Selection</span> button on the top right-hand side</li>
+<li>Click on the <span class="highlight_button">Run</span> button on the top right-hand side 
+<a class="glightbox" href="../rna-seq-images/cgc-flagstat-results.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Samtools Flagstat" src="../rna-seq-images/cgc-flagstat-results.png" title="Samtools Flagstat" /></a></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before conducting differential expression analysis it is important to determine which reference genome was used to generate the BAM files and how the BAM file is sorted.</p>
 </div>
-<p><strong>Table of Contents</strong></p>
-<table>
-<thead>
-<tr>
-<th>Lesson Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../rna_seq_02/">Overview of RNA-Seq</a></td>
-<td>History of RNA-Seq</td>
-</tr>
-<tr>
-<td><a href="../rna_seq_03/">Building a Cohort on the ICDC</a></td>
-<td>Build cohort on the ICDC and export files into the CGC</td>
-</tr>
-<tr>
-<td><a href="../rna_seq_04/">Navigating the CGC</a></td>
-<td>Set up project, inspect files, and copy tools</td>
-</tr>
-<tr>
-<td><a href="../rna_seq_05/">Analyze sample files using pipeline</a></td>
-<td>Run samtools, htseq-count, and DESeq2</td>
-</tr>
-</tbody>
-</table>
+<h2 id="step-2-inspect-bam-file-headers-with-samtools-view">Step 2: Inspect bam file headers with Samtools View</h2>
+<ul>
+<li>Click on <span class="highlight_text">Apps</span> from the menu bar</li>
+<li>Click on Samtools View</li>
+<li>Click on the <span class="highlight_button">Run</span> button from the top right-hand side</li>
+<li>Under App Settings scroll down to <span class="highlight_text">Output the header only</span> and select True from the dropdown menu</li>
+<li>Click on the toggle to turn Batching On</li>
+<li>Select File from the Batch by dropdown menu </li>
+<li>Click on Select file(s) dropdown menu associated with the Input BAM/SAM/CRAM file</li>
+<li>Select all bam files by clicking on the respective checkboxes</li>
+<li>Click on the <span class="highlight_button">Save selection</span> button on the top right-hand side</li>
+<li>Click on the <span class="highlight_button">Run</span> button on the top right-hand side</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In order to count gene features across exons the HTSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3.</p>
+</div>
+<h2 id="step-3-load-the-appropriate-reference-annotation-file">Step 3: Load the appropriate reference annotation file</h2>
+<ul>
+<li>Download the GTF file located here https://hgdownload.soe.ucsc.edu/goldenPath/canFam3/bigZips/genes/</li>
+<li>Click on canFam3.ncbiRefSeq.gtf.gz</li>
+<li>Locate this file on your local computer and open to unzip</li>
+<li>Navigate back to the CGC and add this file to the project</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Binary Alignment Mapping files or BAM files are simply compressed binary representation of sequence data mapped to a particular reference genome. Although these files are not human readable, we can use tools such as HTSeq to count sequencing reads that overlap exons for each gene in a reference genome. </p>
+</div>
+<h2 id="step-4-count-sequencing-reads-with-htseq-count">Step 4: Count sequencing reads with htseq-count</h2>
+<ul>
+<li>Click on <span class="highlight_text">Apps</span> from the secondary menu bar</li>
+<li>Click HTSeq-count</li>
+<li>Click on the <span class="highlight_button">Run</span> button from the top right-hand side</li>
+<li>Under App Settings select name from the Order dropdown menu</li>
+<li>Under App Settings select ignore from the secondary alignments dropdown menu</li>
+<li>Under App Settings select ignore from the supplementary alignments dropdown menu</li>
+<li>Click on the toggle to turn Batching On</li>
+<li>Select File from the Batch by dropdown menu </li>
+<li>Click on the <span class="highlight_button">Select file(s)</span> button associated with Aligned reads</li>
+<li>Select all name sorted bam files from the name_sorted folder</li>
+<li>Click on the <span class="highlight_button">Select file(s)</span> button associated with Reference annotation file</li>
+<li>Select canFam3.ncbiRefSeq.gtf.gz
+<a class="glightbox" href="../rna-seq-images/cgc-htseq-results.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HTSeq-count" src="../rna-seq-images/cgc-htseq-results.png" title="HTSeq-count" /></a></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before conducting differential expression analysis a file must be derived to tell DESeq2 how the samples relate to one another. For this tutorial, we can easily generate this file using our exported file manifest from the ICDC.</p>
+</div>
+<h2 id="step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2">Step 5: Create a csv file with phenotype data for all samples for DESeq2</h2>
+<ul>
+<li>Click on <span class="highlight_text">Files</span> from the menu bar</li>
+<li>In the search box type .csv and hit enter</li>
+<li>Click on the file manifest which will be named with a series of letters and numbers with a .csv file extension</li>
+<li>Click on the <span class="highlight_button">Download</span> button to initiate a download to your local machine
+<a class="glightbox" href="../rna-seq-images/cgc-download-manifest.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="File Manifest" src="../rna-seq-images/cgc-download-manifest.png" title="File Manifest" /></a></li>
+<li>Open this file in Excel or any similar application</li>
+<li>Move the sample_id column so that it is the first column in the file</li>
+<li>Delete all rows pertaining to the Index Files with a file_format of bai</li>
+<li>Save the file as phenotype_filtered.csv</li>
+<li>The file created should be formatted similar to the file shown below
+<a class="glightbox" href="../rna-seq-images/cgc-phenotype_filtered.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="phenotype_filtered.csv" src="../rna-seq-images/cgc-phenotype_filtered.png" title="phenotype_filtered.csv" /></a></li>
+<li>Click on the <span class="highlight_button">Add files</span> button to expand the dropdown menu and select Your Computer</li>
+<li>Click on the <span class="highlight_button">Browse files</span> button to add the file created named phenotype_filtered.csv</li>
+<li>Click on the green <span class="highlight_button">Start upload</span> button</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The DESeq2 package can determine differential expression between sample groups using the raw count table derived by HTSeq and fitting the negative binomial generalized linear model for each gene and then using the Wald test for significance testing. Count outliers are detected using Cook’s distance and can be removed from further analysis. The Wald test p-values from the subset of genes that pass independent filtering can then be adjusted for multiple testing using the Benjamin-Hochburg procedure.</p>
+</div>
+<h2 id="step-6-conduct-differential-expression-with-deseq2">Step 6: Conduct differential expression with DESeq2</h2>
+<ul>
+<li>Click on <span class="highlight_text">Apps</span> from the menu bar</li>
+<li>Click DESeq2 </li>
+<li>Click on the <span class="highlight_button">Run</span> button from the top right-hand side</li>
+<li>Under App Settings enter Urinary_Bladder_Cancer_DGE as the Analysis title</li>
+<li>Under App Settings enter diagnosis as the Covariate of interest</li>
+<li>Under App Settings enter 0.01 as the FDR cutoff</li>
+<li>Under App Settings enter Healthy Control as the Factor level - reference</li>
+<li>Under App Settings enter Bladder Cancer as the Factor level - test</li>
+<li>Under App Settings select htseq from the dropdown menu of Quantification tool</li>
+<li>Under App Settings select True from the dropdown menu of log2 fold change shrinkage</li>
+<li>Under Inputs click on the Select file(s) button associated with Expression data<ul>
+<li>Select the counts.tsv files from the Counts folder</li>
+</ul>
+</li>
+<li>Under Inputs click on the Select file(s) button associated with Gene annotation<ul>
+<li>Select canFam3.ncbiRefSeq.gtf</li>
+</ul>
+</li>
+<li>Under Inputs click on the Select file(s) button associated with Phenotype data<ul>
+<li>Select phenotype_filtered.csv</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" href="../rna-seq-images/cgc-deseq2-parameters.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DESeq2 Parameters" src="../rna-seq-images/cgc-deseq2-parameters.png" title="DESeq2 Parameters" /></a></p>
+<ul>
+<li>Click on the <span class="highlight_button">Run</span> button in the upper right-hand corner</li>
+<li>When the task has completed successfully inspect the results that should be the same as shown below
+<a class="glightbox" href="../rna-seq-images/cgc-pca-plot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PCA Plot" src="../rna-seq-images/cgc-pca-plot.png" title="PCA Plot" /></a>
+<a class="glightbox" href="../rna-seq-images/cgc-cluster-dendrogram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Cluster Dendrogram" src="../rna-seq-images/cgc-cluster-dendrogram.png" title="Cluster Dendrogram" /></a>
+<a class="glightbox" href="../rna-seq-images/cgc-boxplot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Boxplot" src="../rna-seq-images/cgc-boxplot.png" title="Boxplot" /></a>
+<a class="glightbox" href="../rna-seq-images/cgc-analysis-summary.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Summary" src="../rna-seq-images/cgc-analysis-summary.png" title="Summary" /></a></li>
+</ul>
 
               
             </article>
@@ -534,7 +659,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About" rel="prev">
+        <a href="../rna_seq_04/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Navigating the Cancer Genomics Cloud (CGC)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -543,26 +668,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              About
+              Navigating the Cancer Genomics Cloud (CGC)
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../rna_seq_02/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction to RNA-Seq" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Introduction to RNA-Seq
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
