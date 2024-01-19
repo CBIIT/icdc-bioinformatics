@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Navigating the Cancer Genomics Cloud (CGC)
+title: Navigating the CGC
 
 ---
 

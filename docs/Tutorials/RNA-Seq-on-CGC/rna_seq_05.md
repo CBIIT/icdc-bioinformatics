@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Analysis within the Cancer Genomics Cloud (CGC)
+title: Analysis within the CGC
 
 ---
 
