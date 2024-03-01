@@ -24,10 +24,13 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 ## Step 1: Inspect files in project
 * Click on <span class="highlight_text">Files</span> from the task bar
 * Notice that 13 files have been added to the project (6 BAM, 6 BAI files, and 1 file manifest)
+![Exported files](./rna-seq-images/cgc-exported-files.png) "Exported files"
 
+
+## Step 2: Copy apps into project
 !!! info
     The CGC has over 900 public apps that can be easily copied into a project to enable reproducible bioinformatics. For this tutorial, we will copy several apps into our project.
-## Step 2: Copy apps into project
+
 * Click on <span class="highlight_text">Public Apps</span> from the top navigation bar to expand the dropdown menu 
 * Select Workflows and Tools
 * Click the <span class="highlight_button">Browse apps</span> button
