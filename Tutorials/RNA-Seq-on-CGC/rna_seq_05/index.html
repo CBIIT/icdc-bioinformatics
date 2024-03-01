@@ -613,6 +613,10 @@
 <p>Before conducting differential expession analysis it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.</p>
 </div>
 <h2 id="step-1-inspect-summary-stats-for-each-file-with-sambamba-flagstat">Step 1: Inspect summary stats for each file with Sambamba Flagstat</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before conducting differential expession analysis it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.</p>
+</div>
 <ul>
 <li>Click on Sambamba Flagstat</li>
 <li>Click on the <span class="highlight_button">Run</span> button from the top right-hand side</li>
@@ -624,11 +628,11 @@
 <li>Click on the <span class="highlight_button">Run</span> button on the top right-hand side 
 <a class="glightbox" href="../rna-seq-images/cgc-flagstat-results.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Samtools Flagstat" src="../rna-seq-images/cgc-flagstat-results.png" title="Samtools Flagstat" /></a></li>
 </ul>
+<h2 id="step-2-inspect-bam-file-headers-with-samtools-view">Step 2: Inspect bam file headers with Samtools View</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Before conducting differential expression analysis it is important to determine which reference genome was used to generate the BAM files and how the BAM file is sorted.</p>
 </div>
-<h2 id="step-2-inspect-bam-file-headers-with-samtools-view">Step 2: Inspect bam file headers with Samtools View</h2>
 <ul>
 <li>Click on <span class="highlight_text">Apps</span> from the menu bar</li>
 <li>Click on Samtools View</li>
@@ -641,22 +645,22 @@
 <li>Click on the <span class="highlight_button">Save selection</span> button on the top right-hand side</li>
 <li>Click on the <span class="highlight_button">Run</span> button on the top right-hand side</li>
 </ul>
+<h2 id="step-3-load-the-appropriate-reference-annotation-file">Step 3: Load the appropriate reference annotation file</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>In order to count gene features across exons the HTSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3.</p>
+<p>In order to count gene features across exons the HTSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3. </p>
 </div>
-<h2 id="step-3-load-the-appropriate-reference-annotation-file">Step 3: Load the appropriate reference annotation file</h2>
 <ul>
 <li>Download the GTF file located here https://hgdownload.soe.ucsc.edu/goldenPath/canFam3/bigZips/genes/</li>
 <li>Click on canFam3.ncbiRefSeq.gtf.gz</li>
 <li>Locate this file on your local computer and open to unzip</li>
 <li>Navigate back to the CGC and add this file to the project</li>
 </ul>
+<h2 id="step-4-count-sequencing-reads-with-htseq-count">Step 4: Count sequencing reads with htseq-count</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Binary Alignment Mapping files or BAM files are simply compressed binary representation of sequence data mapped to a particular reference genome. Although these files are not human readable, we can use tools such as HTSeq to count sequencing reads that overlap exons for each gene in a reference genome. </p>
+<p>Binary Alignment Mapping files or BAM files are simply compressed binary representation of sequence data mapped to a particular reference genome. Although these files are not human readable, we can use tools such as HTSeq to count sequencing reads that overlap exons for each gene in a reference genome.</p>
 </div>
-<h2 id="step-4-count-sequencing-reads-with-htseq-count">Step 4: Count sequencing reads with htseq-count</h2>
 <ul>
 <li>Click on <span class="highlight_text">Apps</span> from the secondary menu bar</li>
 <li>Click HTSeq-count</li>
@@ -672,11 +676,11 @@
 <li>Select canFam3.ncbiRefSeq.gtf.gz
 <a class="glightbox" href="../rna-seq-images/cgc-htseq-results.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HTSeq-count" src="../rna-seq-images/cgc-htseq-results.png" title="HTSeq-count" /></a></li>
 </ul>
+<h2 id="step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2">Step 5: Create a csv file with phenotype data for all samples for DESeq2</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Before conducting differential expression analysis a file must be derived to tell DESeq2 how the samples relate to one another. For this tutorial, we can easily generate this file using our exported file manifest from the ICDC.</p>
 </div>
-<h2 id="step-5-create-a-csv-file-with-phenotype-data-for-all-samples-for-deseq2">Step 5: Create a csv file with phenotype data for all samples for DESeq2</h2>
 <ul>
 <li>Click on <span class="highlight_text">Files</span> from the menu bar</li>
 <li>In the search box type .csv and hit enter</li>
@@ -693,11 +697,11 @@
 <li>Click on the <span class="highlight_button">Browse files</span> button to add the file created named phenotype_filtered.csv</li>
 <li>Click on the green <span class="highlight_button">Start upload</span> button</li>
 </ul>
+<h2 id="step-6-conduct-differential-expression-with-deseq2">Step 6: Conduct differential expression with DESeq2</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The DESeq2 package can determine differential expression between sample groups using the raw count table derived by HTSeq and fitting the negative binomial generalized linear model for each gene and then using the Wald test for significance testing. Count outliers are detected using Cook’s distance and can be removed from further analysis. The Wald test p-values from the subset of genes that pass independent filtering can then be adjusted for multiple testing using the Benjamin-Hochburg procedure.</p>
 </div>
-<h2 id="step-6-conduct-differential-expression-with-deseq2">Step 6: Conduct differential expression with DESeq2</h2>
 <ul>
 <li>Click on <span class="highlight_text">Apps</span> from the menu bar</li>
 <li>Click DESeq2 </li>
