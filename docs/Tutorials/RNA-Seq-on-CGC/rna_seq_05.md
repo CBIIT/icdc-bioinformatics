@@ -13,6 +13,8 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 !!! info
     Before conducting differential expession analysis it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.
 ## Step 1: Inspect summary stats for each file with Sambamba Flagstat
+!!! info
+    Before conducting differential expession analysis it is important to ensure the quality of the BAM files that are intended to be used as inputs. The percentage of mapped reads can have a large impact on a downstream analysis and could signal an issue with the mapping aligner that was used to generate the BAM file.
 * Click on Sambamba Flagstat
 * Click on the <span class="highlight_button">Run</span> button from the top right-hand side
 * Click on the toggle to turn Batching On
@@ -23,9 +25,10 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 * Click on the <span class="highlight_button">Run</span> button on the top right-hand side 
 ![Samtools Flagstat](./rna-seq-images/cgc-flagstat-results.png "Samtools Flagstat")
 
+
+## Step 2: Inspect bam file headers with Samtools View
 !!! info
     Before conducting differential expression analysis it is important to determine which reference genome was used to generate the BAM files and how the BAM file is sorted.
-## Step 2: Inspect bam file headers with Samtools View
 * Click on <span class="highlight_text">Apps</span> from the menu bar
 * Click on Samtools View
 * Click on the <span class="highlight_button">Run</span> button from the top right-hand side
@@ -37,17 +40,19 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 * Click on the <span class="highlight_button">Save selection</span> button on the top right-hand side
 * Click on the <span class="highlight_button">Run</span> button on the top right-hand side
 
+
+## Step 3: Load the appropriate reference annotation file
 !!! info
-    In order to count gene features across exons the HTSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3.
-## Step 3: Load the appropriate reference annotation file 
+    In order to count gene features across exons the HTSeq-count tool will need a Gene Transfer Format (GTF) file that contains information about each gene from a particular reference genome. In this case, the original BAM files were mapped to the NCBI reference genome canFam3. 
 * Download the GTF file located here https://hgdownload.soe.ucsc.edu/goldenPath/canFam3/bigZips/genes/
 * Click on canFam3.ncbiRefSeq.gtf.gz
 * Locate this file on your local computer and open to unzip
 * Navigate back to the CGC and add this file to the project
 
-!!! info
-    Binary Alignment Mapping files or BAM files are simply compressed binary representation of sequence data mapped to a particular reference genome. Although these files are not human readable, we can use tools such as HTSeq to count sequencing reads that overlap exons for each gene in a reference genome. 
+ 
 ## Step 4: Count sequencing reads with htseq-count
+!!! info
+    Binary Alignment Mapping files or BAM files are simply compressed binary representation of sequence data mapped to a particular reference genome. Although these files are not human readable, we can use tools such as HTSeq to count sequencing reads that overlap exons for each gene in a reference genome.
 * Click on <span class="highlight_text">Apps</span> from the secondary menu bar
 * Click HTSeq-count
 * Click on the <span class="highlight_button">Run</span> button from the top right-hand side
@@ -62,10 +67,10 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 * Select canFam3.ncbiRefSeq.gtf.gz
 ![HTSeq-count](./rna-seq-images/cgc-htseq-results.png "HTSeq-count")
 
+
+## Step 5: Create a csv file with phenotype data for all samples for DESeq2
 !!! info
     Before conducting differential expression analysis a file must be derived to tell DESeq2 how the samples relate to one another. For this tutorial, we can easily generate this file using our exported file manifest from the ICDC.
-## Step 5: Create a csv file with phenotype data for all samples for DESeq2
-
 * Click on <span class="highlight_text">Files</span> from the menu bar
 * In the search box type .csv and hit enter
 * Click on the file manifest which will be named with a series of letters and numbers with a .csv file extension
@@ -81,11 +86,9 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 * Click on the <span class="highlight_button">Browse files</span> button to add the file created named phenotype_filtered.csv
 * Click on the green <span class="highlight_button">Start upload</span> button
 
+## Step 6: Conduct differential expression with DESeq2
 !!! info
     The DESeq2 package can determine differential expression between sample groups using the raw count table derived by HTSeq and fitting the negative binomial generalized linear model for each gene and then using the Wald test for significance testing. Count outliers are detected using Cook’s distance and can be removed from further analysis. The Wald test p-values from the subset of genes that pass independent filtering can then be adjusted for multiple testing using the Benjamin-Hochburg procedure.
-
-## Step 6: Conduct differential expression with DESeq2
-
 * Click on <span class="highlight_text">Apps</span> from the menu bar
 * Click DESeq2 
 * Click on the <span class="highlight_button">Run</span> button from the top right-hand side
@@ -111,10 +114,3 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 ![Cluster Dendrogram](./rna-seq-images/cgc-cluster-dendrogram.png "Cluster Dendrogram")
 ![Boxplot](./rna-seq-images/cgc-boxplot.png "Boxplot")
 ![Summary](./rna-seq-images/cgc-analysis-summary.png "Summary")
-
-
-
-
-
-
-
