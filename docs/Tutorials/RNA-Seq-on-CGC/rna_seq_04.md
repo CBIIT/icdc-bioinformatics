@@ -9,10 +9,11 @@ Navigating the Cancer Genomics Cloud (CGC)
 ============================================
 The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded by the National Cancer Institute. The CGC is a cloud-based technology that enables analysis, storage, and computation of large cancer datasets. The CGC interoperates with the ICDC and other data commons within the Cancer Research Data Commons (CRDC) making it easier than ever to move from data acquisition to data analysis.
 
-!!! info
-    If this is the first time you are working within the CGC you will need to create a project to serve as a container to hold the files from the ICDC, the tools and apps from the CGC, and the generated analysis output files. Each new user to the CGC will be provided with $300 of pilot funding, courtesy of the NCI
 
-## Step 0: Create a CGC project 
+
+## Step 0: Create a CGC project
+!!! info
+    If this is the first time you are working within the CGC you will need to create a project to serve as a container to hold the files from the ICDC, the tools and apps from the CGC, and the generated analysis output files. Each new user to the CGC will be provided with $300 of pilot funding, courtesy of the NCI 
 * Skip to Step 1 if a project already exists
 * Click on <span class="highlight_text">Projects</span> from the top navigation bar to expand the dropdown menu
 * Click on the <span class="highlight_button">Create a project</span> button at the bottom of the menu
@@ -24,7 +25,7 @@ The Seven Bridges Cancer Genomics Cloud (CGC) is powered by Velsera and funded b
 ## Step 1: Inspect files in project
 * Click on <span class="highlight_text">Files</span> from the task bar
 * Notice that 13 files have been added to the project (6 BAM, 6 BAI files, and 1 file manifest)
-![Exported files](./rna-seq-images/cgc-exported-files.png) "Exported files"
+![Exported files](./rna-seq-images/cgc-exported-files.png "Exported files")
 
 
 ## Step 2: Copy apps into project
