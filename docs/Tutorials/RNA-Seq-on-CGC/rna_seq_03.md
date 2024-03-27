@@ -43,3 +43,4 @@ All files available through the ICDC are open-access and can be exported to the 
 * Click on the <span class="highlight_button">Import data</span> button
 
 ![ICDC My Files Cart Page](./rna-seq-images/icdc-loaded-cart.png "My Files Cart page")
+![CGC Import Data](./rna-seq-images/cgc-import-data.png "CGC Import Data")
